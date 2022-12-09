@@ -1,0 +1,52 @@
+@use '../../styles/partials/mixin' as*;
+@use '../../styles/partials/variables' as*;
+
+.productCat {
+  @include tablet{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+ &-details{
+  padding: 2rem 2rem 2rem 0;
+  margin: 1rem;
+  // width: 50%;
+  @include tablet{
+    width: 50%;
+  }
+ }
+
+ &-womenOption{
+  padding: .5rem;
+  margin-right: 1rem;
+  border: none;
+  border-bottom: 1px solid #252321;
+
+ }
+ &-menOption{
+  padding: .5rem;
+  margin-right: 1rem;
+  border: none;
+  border-bottom: 1px solid #252321;
+ }
+ &-kidOption{
+  padding: .5rem;
+  margin-right: 1rem;
+  border: none;
+  border-bottom: 1px solid #252321;
+ }
+
+ &-search__input{
+  padding: 1rem .5rem;
+  height: 1rem;
+  width: 100%;
+  margin: 1rem .5rem;
+  
+
+  @include tablet{
+    margin: 2.5rem 2rem 2rem 2rem;
+    width: 100%;
+  }
+ }
+}

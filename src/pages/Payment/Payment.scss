@@ -1,0 +1,92 @@
+@use '../../styles/partials/mixin' as*;
+@use '../../styles/partials/variables' as*;
+
+.payment-page{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  &__details{
+   padding: 1rem;
+   margin: 1rem;
+   width: 100%;
+  }
+  &__container{
+    width: 100%;
+    margin: 4rem 1rem;
+    padding: 1rem;
+  }
+
+  &__header{
+    margin: 1rem;
+    padding: 0 1rem;
+  }
+
+  &__radio-inputs{
+    margin-left: 1.5rem;
+  }
+
+  &__radio-label{
+    margin-right: 7rem;
+  }
+
+  &__inputs{
+    width: 100%;
+    margin: 0 1rem;
+  }
+
+  &__input-card{
+    width: 85%;
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  &__input{
+    width: 40%;
+    padding: 1rem;
+    margin: 1rem;
+  }
+}
+
+.containerTwo{
+  width: 80%;
+  height: 60vh;
+  margin: 7rem 5rem 3.5rem 3rem;
+  padding: 1rem 2rem;
+  border: 1px solid $lightgrey;
+  
+
+  &__p{
+    text-align: center;
+  }
+
+  &__coupon{
+    padding: 1rem;
+    padding-top: 1rem;
+    border-bottom: 1px solid $lightgrey;
+  }
+
+    
+  &__total{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__discount{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__Coupon{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid $lightgrey;
+  }
+
+  &__final-price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,27 @@
+@use '../../styles/partials/mixin' as *;
+@use '../../styles/partials/variables' as *;
+
+.main{
+
+  &-hero{
+    width: 100%;
+    // height: 100vh;
+  }
+
+  &-title{
+    padding: 1rem;
+  }
+
+  &-imageOne{
+    width: 25%;
+    height: 25%;
+  }
+  &-imageTwo{
+    width: 25%;
+    height: 25%;
+  }
+  &-imageThree{
+    width: 25%;
+    height: 25%;
+  }
+}

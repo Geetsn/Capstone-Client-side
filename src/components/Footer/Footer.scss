@@ -1,0 +1,88 @@
+@use '../../styles/partials/mixin' as*;
+@use '../../styles/partials/variables' as*;
+@use '../../styles/partials/font' as*;
+
+.footer{
+  background-color: $blizzard_blue;
+
+  &-details{
+    padding: 1rem;
+
+    @include tablet{
+      display: flex;
+      flex-direction: row;
+      // padding: 2rem;
+    }
+  }
+
+ &-contact{
+  padding: 0;
+  @include tablet{
+    padding: 1rem;
+  }
+
+  @include desktop{
+    width: 25%;
+  }
+
+  &__title{
+    margin-bottom: 0;
+  }
+
+  &__email{
+    margin: 0.5rem 0 0.5rem 0;
+    font-size:medium ;
+  }
+  &__phone{
+    margin-top: 0;
+    font-size:medium ;
+  }
+ }
+
+ &-location{
+  @include tablet{
+    padding: 1rem;
+  }
+
+  @include desktop{
+    width: 25%;
+  }
+ }
+
+ &-title{
+  margin-bottom: .5rem;
+ }
+ &-add{
+  margin-top: 0;
+ }
+
+ &-socials{
+  @include tablet{
+    padding: 1rem;
+  }
+
+  @include desktop{
+    width: 25%;
+  }
+ }
+
+ &-fb{
+  margin-right: .5rem;
+ }
+ &-ig{
+  margin-right: .5rem;
+ }
+ 
+  
+  &-text{
+    background-color: $primary_background;
+    font-size: small;
+    padding: 1rem;
+    margin-bottom: 0;
+
+    @include tablet{
+      text-align: center;
+    }
+  }
+}
+

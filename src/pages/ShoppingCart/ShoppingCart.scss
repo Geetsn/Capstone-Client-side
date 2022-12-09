@@ -1,62 +1,50 @@
 @use '../../styles/partials/mixin' as*;
 @use '../../styles/partials/variables' as*;
 
-.shipping-detail__page{
+.shopping-cart{
   display: flex;
   flex-direction: row;
   width: 100%;
-}
-.shipping-details{
-  padding: 1rem;
-  margin: 1rem;
-  width: 100%;
-  
-  &__container{
-    width: 100%;
-    margin: 1rem;
-    padding: 1rem;
-  }
 
-  &__header{
-    margin: 1rem;
-    padding: 0 1rem;
+ &__img{
+  padding: 3rem 0;
+ }
+ &__details{
+  margin: 0 0 3rem 3rem;
+  justify-content: flex-end;
+ }
+  
+  &__title{
+    margin: 0 1rem;
   }
 
   &__inputs{
-    width: 100%;
     margin: 0 1rem;
+    display: flex;
+    flex-direction: row;
   }
 
-  &__input{
-    width: 40%;
-    padding: 1rem;
-    margin: 1rem;
+  &__p{
+    margin-right: 2rem;
   }
 
   &__address{
-    width: 100%;
-    margin: 0 1rem;
+    padding-bottom: 4rem;
   }
 
   &__address-input{
-    width: 85%;
-    padding: 1rem;
+    width: 10%;
     margin: 1rem;
   }
+}  
 
-  &__text{
-    margin: 1rem .5rem 1rem 1.7rem;
-    padding: 0 1rem;
-  }
+.containerTwo{
+  width: 80%;
+  height: 60vh;
+  margin: 7rem 5rem 3.5rem 3rem;
+  padding: 1rem 2rem;
+  border: 1px solid $lightgrey;
 
-  &__containerTwo{
-    width: 80%;
-    height: 60vh;
-    margin: 7rem 5rem 3.5rem 3rem;
-    padding: 1rem 2rem;
-    border: 1px solid $lightgrey;
-    
-  }
   &__p{
     text-align: center;
   }
@@ -66,9 +54,9 @@
     padding-top: 1rem;
     border-bottom: 1px solid $lightgrey;
   }
-  
+
     
- &__total{
+  &__total{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -90,5 +78,4 @@
     flex-direction: row;
     justify-content: space-between;
   }
-  
 }

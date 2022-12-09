@@ -1,0 +1,40 @@
+@use '../../styles/partials/mixin' as *;
+@use '../../styles/partials/variables' as *;
+
+.header-nav {
+  padding: 1rem;
+  background-color: $bone;
+ 
+  &__details{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+  }
+
+  &__logo{
+    padding: 0;
+    
+  }
+
+  &__links{
+    margin-left: auto;
+   
+    @include tablet { 
+      flex-direction: row;
+    }
+  }
+  
+
+  &__wishlist{
+    color: $black;
+    text-decoration-line: none;
+    padding-left: .5rem;
+  }
+
+  &__cart{
+    color:$black;
+    text-decoration-line: none;
+    padding-left: .5rem;
+  }
+}
