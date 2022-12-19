@@ -1,9 +1,17 @@
 import '../../pages/Login/Login.scss';
 // import { Link } from 'react-router-dom';
 import Btn from '../../components/Btn/Btn';
+import Header from '../../components/Header/Header';
 
 function Login () {
+
+  
+  // localStorage.setItem("message", "saved in browser storage");
+  // console.log(localStorage.getItem("message"));
+  
   return(
+    <>
+    <Header />
     <form className='login-page'>
         <div className='login-page__form'>
           <h3 className='login-page__header'>Login</h3>
@@ -34,6 +42,7 @@ function Login () {
         <Btn className='btn_register' text="Register"/>
         </div>  
     </form>
+    </>
   )
 }
 

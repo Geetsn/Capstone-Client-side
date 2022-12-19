@@ -34,7 +34,20 @@
   width: 18%;
   height: 2rem;
   padding: .5rem;
-  margin: 0;
+  margin: .5rem;
+  background-color: $blizzard_blue;
+  float: right;
+  font-weight: bold;
+  &:hover {
+    color: $primary_background;
+    background-color: $black;
+  }
+}
+.btn_edit { 
+  width: 18%;
+  height: 2rem;
+  padding: .5rem;
+  margin: .5rem;
   background-color: $blizzard_blue;
   float: right;
   font-weight: bold;
@@ -86,4 +99,5 @@
 
 .btn{
   margin-left: 16.5rem;
+  
 }

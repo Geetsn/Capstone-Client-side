@@ -1,16 +1,24 @@
+import {useNavigate} from 'react-router-dom';
 import '../../components/ProductCategory/ProductCategory.scss';
 
 function ProductCategory(){
+
+  const navigate = useNavigate();
+
+
   return(
     <div className='productCat'>
       <div className='productCat-details'>
         {/* <label>Women</label> */}
-          <select className='productCat-womenOption'>
-            <option value="">Women</option>
-            <option value="1">Shirts</option>
-            <option value="2">Sweaters</option>
-            <option value="3">Coats</option>
-            <option value="4">Dresses</option>
+          <select className='productCat-womenOption' onChange={(e)=>{
+            console.log(e.target.value);
+            navigate(`/products/${e.target.value}`);
+          }}>
+            <option value="women">Women</option>
+            <option value="shirts">Shirts</option>
+            <option value="sweaters">Sweaters</option>
+            <option value="coats">Coats</option>
+            <option value="dresses">Dresses</option>
           </select>
         {/* <label>Men</label> */}
           <select className='productCat-menOption'>
