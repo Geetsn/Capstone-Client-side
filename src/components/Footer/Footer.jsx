@@ -30,7 +30,7 @@ function Footer(props){
         </div>
       </div>
     
-         <p class="footer-text">Copyright Universal © 2022 All Rights Reserved</p>
+         <p className="footer-text">Copyright Universal © 2022 All Rights Reserved</p>
     </div>
   )
 }

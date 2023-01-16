@@ -65,11 +65,9 @@ const ProductDetails = (props) => {
     }
     navigate('/shopping-cart');
     
+    
   }
 
-  const handleNavigateToProductsEdit = () =>{
-    navigate('/edit-products')
-  }
 
   useEffect(() => {
     axios
@@ -90,8 +88,11 @@ const ProductDetails = (props) => {
     <div className='product-details__container'>
        {/* <h3>{productDetails.product_name}</h3> */}
        <img src={`http://localhost:8080/${productDetails.product_image}`} />
-       <p>{productDetails.description}</p>
-       {/* <p>{productDetails.price}</p> */}
+       <div className='product-details__container-part'>
+        <p>{productDetails.description}</p>
+        {/* <p>{productDetails.price}</p> */}
+        <Btn className='btn_back' onClick={() => handleNavigateToWishlist()} type="button" text='WISHLIST'/>
+       </div>
     </div>
      <div className='containerTwo'>
      <h5 className='containerTwo__p'>{productDetails.product_name}</h5>
@@ -127,15 +128,16 @@ const ProductDetails = (props) => {
             <option value="3">3</option>
           </select>
        </div>
-      
-       <Btn className='btn_next btn'  type="button" text='ADD TO CART' 
-       onClick={() => 
-        handleNavigateToCart()}/>
-       <Btn className='btn_back' onClick={() => handleNavigateToWishlist()} type="button" text='WISHLIST'/>
-       <Btn className='btn_edit'  type="button" text='EDIT' 
-       onClick={() => 
-        handleNavigateToProductsEdit()}
-       />
+      <div className='btns'>
+        <Btn className='btn_edit'  type="button" text='EDIT' 
+        onClick={() => 
+          navigate(`/edit-products/${productDetails.id}`)}
+        />
+       <Btn className='btn_next'  type="button" text='ADD TO CART' 
+        onClick={() => 
+          handleNavigateToCart()}/>
+    
+       </div>
      </div>
    </div>
    </div>

@@ -37,16 +37,21 @@
   border-bottom: 1px solid #252321;
  }
 
+ &-searchbar{
+  
+   padding: 1rem .5rem;
+   height: 2rem;
+   width: 50%;
+   margin: 1rem;
+ }
+
  &-search__input{
-  padding: 1rem .5rem;
-  height: 1rem;
-  width: 100%;
-  margin: 1rem .5rem;
   
 
   @include tablet{
-    margin: 2.5rem 2rem 2rem 2rem;
-    width: 100%;
+    margin: 1.5rem;
+    width: 90%;
+    padding: 5px;
   }
  }
 }

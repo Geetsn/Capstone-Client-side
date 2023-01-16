@@ -150,7 +150,7 @@ console.log(shipping_details)
         <div className='shipping-details__coupon'>
           <input type="radio" />
           <label >Apply coupon/ discount</label>
-          <Btn className='btn_add' text='Add'/>
+          {/* <Btn className='btn_add' text='Add'/> */}
         </div>
         <h5 className='shipping-details__p'>Price Details</h5>
         <div className='shipping-details__price'>

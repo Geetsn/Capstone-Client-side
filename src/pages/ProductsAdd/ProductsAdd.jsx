@@ -1,6 +1,6 @@
 import '../../pages/ProductsAdd/ProductsAdd.scss';
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Header from '../../components/Header/Header';
 import Btn from '../../components/Btn/Btn';
 import { useNavigate } from 'react-router-dom';
@@ -15,13 +15,11 @@ function ProductsAdd () {
   const [quantity, setQuantity] = useState()
   const navigate = useNavigate();
 
-  const handleNavigateToProducts = () => {
-    navigate('/products');
-    
-  }
+  const URL = process.env.REACT_APP_SERVER_URL || '';
+
 
   const item = {
-    item_name: productName,
+    product_name: productName,
     description: description,
     category: category,
     quantity: quantity,
@@ -30,18 +28,30 @@ function ProductsAdd () {
     price: price,
   }
 
+const handleOnAddProduct = (detail) => {
+  
+    console.log(detail);
+    console.log(`${URL}/products`)
 
-  axios.post(`http://localhost:8080/add-products/`, item)
-  .then((response) => {
-    console.log(response.data);
-    navigate('/add-products');
-  })
+    axios
+    .post(`${URL}/products`,detail)
+    .then((response) => {
+      console.log('yeah',response.data);
+      alert('product added')
+      navigate('/products')
+    })
+    .catch(err => console.log(`cant do ${err}`))
+}
 
   return(
     <>
     <Header />
     <div>
-    <form className='shipping-details' >
+    <form className='shipping-details'
+    onSubmit={e => {
+      e.preventDefault();
+      handleOnAddProduct(item)
+    }} >
           <div className='shipping-details__container'>
             <h3 className='shipping-details__header'>Add New Product</h3>
             {/* <div className='shipping-details__inputs'> */}
@@ -78,7 +88,7 @@ function ProductsAdd () {
             </div> 
           
             <Btn className='btn_add'  
-            onClick={() => handleNavigateToProducts()} type="button" 
+            type="submit" 
             text='ADD'
             />
           </div>

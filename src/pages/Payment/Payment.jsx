@@ -107,7 +107,7 @@ function Payment(){
         <div className='containerTwo__coupon'>
           <input type="radio" />
           <label >Apply coupon/ discount</label>
-          <Btn className='btn_add' text='Add'/>
+          {/* <Btn className='btn_add' text='Add'/> */}
         </div>
         <h5 className='containerTwo__p'>Price Details</h5>
         <div lassName='containerTwo__price'>

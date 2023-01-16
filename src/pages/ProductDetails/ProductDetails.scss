@@ -6,10 +6,20 @@
   flex-direction: row;
   width: 100%;
   padding: 1rem;
+
+  &__container{
+    width: 50%;
+  }
+
+  &__container-part{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .containerTwo{
-  width: 80%;
+  width: 50%;
   height: 60vh;
   margin: 7rem 5rem 3.5rem 3rem;
   padding: 1rem 2rem;
@@ -43,3 +53,10 @@
   }
 
 } 
+
+.btns{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: auto;
+}
